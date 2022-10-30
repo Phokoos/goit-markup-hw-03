@@ -7,6 +7,7 @@
 	--primary-background-color: #F5F5F5;
 	--accent-background-color: #2F303A;
 	--primary-black-color: #000000;
+	--header-border: #ECECEC;
 }
 
 body {
@@ -24,7 +25,7 @@ body {
 
 /* 
 =====================
-Збиваєм налаштування h,p,img,list
+Збиваєм відступи h,p,img,list
 =====================
 */
 
@@ -47,6 +48,7 @@ img {
 .list {
 	list-style: none;
 	margin: 0px;
+	padding: 0;
 }
 
 /* 
@@ -55,6 +57,11 @@ img {
 ===================
 */
 
+.section {
+	padding-top: 94px;
+	padding-bottom: 94px;
+}
+
 .container {
 	margin-left: auto;
 	margin-right: auto;
@@ -62,7 +69,7 @@ img {
 	width: 1170px;
 	padding: 0 15px;
 
-	outline: 2px dashed red;
+	/* outline: 2px dashed red; */
 }
 
 .btn {
@@ -89,6 +96,7 @@ img {
 
 .header {
 	background-color: var(--primary-white-color);
+	border-bottom: 1px solid var(--header-border);
 }
 
 .header-nav {
@@ -204,7 +212,6 @@ img {
 
 .address-list {
 	margin-top: 20px;
-	padding-left: 0;
 
 	list-style: none;
 	font-style: normal;
@@ -289,15 +296,12 @@ img {
 .advantages {}
 
 .advantages-title {
-	display: none;
-	/* ЗАБРАТИ */
+	position: absolute;
+	top: -9999px;
+	left: -9999px;
 }
 
 .advantages-list {
-	padding: 0;
-	padding-top: 95px;
-	padding-bottom: 120px;
-
 	display: flex;
 	flex-wrap: wrap;
 	gap: 30px;
@@ -327,7 +331,9 @@ img {
 ==============
 */
 
-.activity {}
+.activity {
+	padding-top: 0;
+}
 
 .activity-title {
 	margin-bottom: 50px;
@@ -341,9 +347,6 @@ img {
 }
 
 .activity-list {
-	padding: 0;
-	padding-bottom: 95px;
-
 	display: flex;
 	flex-wrap: wrap;
 	gap: 30px;
@@ -364,10 +367,7 @@ img {
 	background-color: var(--secondary-background-color);
 }
 
-.team-container {
-	padding-top: 95px;
-	padding-bottom: 95px;
-}
+.team-container {}
 
 
 .team-title {
@@ -381,8 +381,6 @@ img {
 }
 
 .team-list {
-	padding: 0;
-
 	display: flex;
 	flex-wrap: wrap;
 	gap: 30px;
@@ -428,18 +426,15 @@ img {
 */
 .works {}
 
-.works-container {
-	padding-top: 95px;
-	padding-bottom: 95px;
-}
+.works-container {}
 
 .works-title {
-	/* ВИПРАВИТИ */
-	display: none;
+	position: absolute;
+	top: -9999px;
+	left: -9999px;
 }
 
 .works-filter {
-	padding: 0;
 	margin-bottom: 50px;
 
 	display: flex;
@@ -476,8 +471,6 @@ img {
 }
 
 .works-list {
-	padding: 0;
-
 	display: flex;
 	flex-wrap: wrap;
 	gap: 30px;
@@ -486,12 +479,14 @@ img {
 .works-item {
 	flex-basis: calc((100% - 2*30px)/3);
 
-	outline: 1px solid #EEEEEE;
+
 	background-color: var(--primary-white-color);
 }
 
 .works-item-text {
 	padding: 20px 24px;
+	border: 1px solid #EEEEEE;
+	border-top: none;
 }
 
 .works-link {
